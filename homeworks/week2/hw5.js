@@ -3,7 +3,7 @@ function join(arr, concatStr) {
     for (let item of arr) {
         retStr += `${item}${concatStr}`;
     }
-    return retStr;
+    return retStr.slice(0,retStr.length-1);
 }
 
 function repeat(str, times) {
@@ -13,6 +13,3 @@ function repeat(str, times) {
     }
     return retStr;
 }
-
-console.log(join(['a'], '!'));
-console.log(repeat('a', 5));

@@ -5,7 +5,4 @@ function reverse(str) {
         retStr += str[i];
     }
     console.log(retStr);
-    return retStr;
 }
-
-reverse('hello');
