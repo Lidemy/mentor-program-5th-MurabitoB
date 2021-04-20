@@ -1,9 +1,15 @@
 function join(arr, concatStr) {
     let retStr = '';
-    for (let item of arr) {
-        retStr += `${item}${concatStr}`;
+    
+    for (let i = 0; i < arr.length - 1; i++) {
+        retStr += (arr[i].toString() + concatStr);
     }
-    return retStr.slice(0,retStr.length - 1);
+
+    // 避免 index out of range
+    if(arr.length)
+        retStr += arr[arr.length-1] + '';
+
+    return retStr;
 }
 
 function repeat(str, times) {
