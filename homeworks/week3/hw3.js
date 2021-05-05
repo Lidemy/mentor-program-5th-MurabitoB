@@ -17,14 +17,19 @@ rl.on('close', function() {
 
 // 上面都不用管，只需要完成這個 function 就好，可以透過 lines[i] 拿取內容
 function solve(lines) {
-    
+    for(let i = 1 ; i < lines.length ; i++){
+      isPrime(Number(lines[i])) ? console.log('Prime') : console.log('Composite');
+    }
 }
 
 function isPrime(n){
     if(n === 1)
         return false;
     for(let i = 2 ; i < n / 2 + 1; i++){
-        if()
+      if(n%i == 0){
+        return false;s
+      }
     }
+    return true;
 }
 
