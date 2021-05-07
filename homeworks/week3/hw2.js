@@ -24,7 +24,6 @@ function solve(lines) {
     for(let i = lowerBound; i <=  upperBound ; i++){
         let temp = i +'';
         let total = 0;
-        //console.log(temp.length);
         for(let j = 0 ; j< temp.length; j++){
             total += Math.pow(Number(temp[j]),temp.length);
         }
