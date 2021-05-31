@@ -9,7 +9,11 @@ const options = {
 
 
 request(baseUrl + `/games/top`, options, function (error, response, body) {
+    if (error) {
+        return console.log(error);
+    }
     var games = JSON.parse(body).top;
+
     games.forEach(element => {
         console.log(`${element.viewers} ${element.game.name}`)
     });

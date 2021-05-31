@@ -2,6 +2,9 @@ const request = require('request');
 const baseUrl = 'https://restcountries.eu/rest/v2';
 
 request(baseUrl + `/name/${process.argv[2]}`, function (error, response, body) {
+    if (error) {
+        return console.log(error);
+    }
     var countries = JSON.parse(body);
     if(countries.length)
         countries.forEach(country => {
